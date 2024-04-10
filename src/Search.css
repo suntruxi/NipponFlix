@@ -1,0 +1,40 @@
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0px;
+}
+
+.search-input {
+  display: flex;
+}
+
+.search-box {
+  margin-top: 50px;
+  padding: 15px 20px; /* Increased padding for extra uwu comfort */
+  background: #ffc0cb; /* Sweet pink background */
+  color: #ff69b4; /* Lovely pink text color */
+  border: 2px solid #ff69b4; /* Lovely pink border */
+  width: 300px;
+  border-radius: 30px; /* Extra rounded corners for uwu cuteness */
+  font-family: "Comic Sans MS", cursive; /* Fun and playful font */
+  font-size: 18px; /* Slightly larger font size for extra uwu charm */
+  text-align: center; /* Center the text */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for extra depth */
+}
+
+.btn-search {
+  background: #ff69b4; /* Lovely pink button background */
+  color: white;
+  border: none;
+  padding: 15px 25px; /* Increased padding for extra uwu love */
+  margin-left: 10px;
+  border-radius: 30px; /* Extra rounded corners for uwu cuteness */
+  font-family: "Comic Sans MS", cursive; /* Fun and playful font */
+  font-size: 18px; /* Slightly larger font size for extra uwu charm */
+}
+
+.btn-search:hover {
+  cursor: pointer;
+  color: black;
+}

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Row from "./Row";
+import requests from "./requests";
+import Banner from "./Banner";
+import Header from "./Header";
+import Search from "./Search";
+import FooterCompound from "./compounds/FooterCompound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Search />
+      <Banner />
+      <Row
+        title="STUDIO GHIBLI MOVIES"
+        fetchUrl={requests.fetchStudioGhibliMovies}
+        isLargeRow
+      />
+      <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending} />
+      <Row title="NARUTO UNIVERSE" fetchUrl={requests.fetchNarutoVerse} />
+      <Row title="Fantasy Anime" fetchUrl={requests.fetchFantasyAnime} />
+      <Row title="Comedy Anime" fetchUrl={requests.fetchComedyAnime} />
+      <Row title="Horror Anime" fetchUrl={requests.fetchHorrorAnime} />
+      <Row title="Romance Anime" fetchUrl={requests.fetchRomanceAnime} />
+      <Row title="Asian Movies" fetchUrl={requests.fetchAsianMovies} />
+
+      <FooterCompound />
     </div>
   );
 }
