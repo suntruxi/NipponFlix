@@ -1,32 +1,16 @@
 import "./App.css";
-import Row from "./Row";
-import requests from "./requests";
-import Banner from "./Banner";
-import Header from "./Header";
-import Search from "./Search";
-import FooterCompound from "./compounds/FooterCompound";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Homepage from "./Homepage";
+import Results from "./Results";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <Search />
-      <Banner />
-      <Row
-        title="STUDIO GHIBLI MOVIES"
-        fetchUrl={requests.fetchStudioGhibliMovies}
-        isLargeRow
-      />
-      <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending} />
-      <Row title="NARUTO UNIVERSE" fetchUrl={requests.fetchNarutoVerse} />
-      <Row title="Fantasy Anime" fetchUrl={requests.fetchFantasyAnime} />
-      <Row title="Comedy Anime" fetchUrl={requests.fetchComedyAnime} />
-      <Row title="Horror Anime" fetchUrl={requests.fetchHorrorAnime} />
-      <Row title="Romance Anime" fetchUrl={requests.fetchRomanceAnime} />
-      <Row title="Asian Movies" fetchUrl={requests.fetchAsianMovies} />
-
-      <FooterCompound />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/results" element={<Results />} />
+      </Routes>
+    </Router>
   );
 }
 
