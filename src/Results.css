@@ -1,0 +1,48 @@
+body {
+  background-color: #111;
+  color: white;
+}
+
+.results-container {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.movie-poster {
+  width: 50%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.movie-poster:hover {
+  transform: scale(1.1);
+}
+
+.movie-details {
+  color: antiquewhite;
+  padding: 10px;
+}
+
+.movie-title {
+  margin: 0;
+  color: antiquewhite;
+}
+
+.movie-overview {
+  color: aqua;
+}
+
+.movie-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.results-title {
+  margin-top: 20px;
+}

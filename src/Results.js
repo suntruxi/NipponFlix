@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import "./Results.css";
+import Header from "./Header";
+import FooterCompound from "./compounds/FooterCompound";
 
 function Results() {
   const location = useLocation();
   const { query } = location.state || {};
-  console.log(query);
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    // Define the API endpoint using the query parameter
     const apiUrl = `https://api.themoviedb.org/3/search/movie`;
     const apiKey = process.env.REACT_APP_API_KEY;
 
-    // Fetch data from the API using Axios
     axios
       .get(apiUrl, {
         params: {
@@ -22,24 +22,33 @@ function Results() {
         },
       })
       .then((response) => {
-        // Update state with the fetched results
         setResults(response.data.results);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, [query]); // useEffect will re-run whenever the query parameter changes
-  console.log(results);
+  }, [query]);
 
-  // Render the search results
   return (
     <div>
-      <h1>Search results for {query}</h1>
-      <ul>
+      <Header />
+      <h1 className="results-title">Search results for "{query}"</h1>
+      <div className="results-container">
         {results.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
+          <div key={movie.id} className="movie-card">
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              alt={movie.title}
+              className="movie-poster"
+            />
+            <div className="movie-details">
+              <h2 className="movie-title">{movie.title}</h2>
+              <p className="movie-overview">{movie.overview}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
+      <FooterCompound />
     </div>
   );
 }

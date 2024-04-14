@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
@@ -7,13 +8,17 @@ function Header() {
       <div>
         <ul className="nav">
           <li>
-            <img
-              className="logo"
-              src="https://i.pinimg.com/474x/38/b1/0d/38b10d5939ce4c335f64f986f89a1676.jpg"
-              alt="web-logo"
-            />
+            <Link to="/" className="logo-link">
+              <img
+                className="logo"
+                src="https://i.pinimg.com/474x/38/b1/0d/38b10d5939ce4c335f64f986f89a1676.jpg"
+                alt="web-logo"
+              />
+            </Link>
           </li>
-          <li>Home</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>Shows</li>
           <li>Movies</li>
           <li>Recently Added</li>

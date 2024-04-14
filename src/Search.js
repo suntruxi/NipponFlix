@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Search.css";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
+import FooterCompound from "./compounds/FooterCompound";
 
 function Search() {
   const [searchQuery, setSearchQuery] = useState("");
