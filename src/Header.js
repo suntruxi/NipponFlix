@@ -11,7 +11,7 @@ function Header() {
             <Link to="/" className="logo-link">
               <img
                 className="logo"
-                src="https://i.pinimg.com/474x/38/b1/0d/38b10d5939ce4c335f64f986f89a1676.jpg"
+                src="https://i.imgur.com/6RdvQ5P.png"
                 alt="web-logo"
               />
             </Link>
@@ -19,17 +19,16 @@ function Header() {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>Shows</li>
-          <li>Movies</li>
-          <li>Recently Added</li>
-          <li>My List</li>
+          <li>
+            <Link to="/Surprise"> Surprise Me</Link>
+          </li>
         </ul>
       </div>
 
       <div className="nav">
         <img
           className="avatar"
-          src="https://i.pinimg.com/originals/72/a2/0a/72a20a5f989b3a8b465df1b27fdacb67.jpg"
+          src="https://i.pinimg.com/originals/56/96/3f/56963f19121e9db4fc34df65e4f26744.png"
           alt="header-avatar"
         />
       </div>

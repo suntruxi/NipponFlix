@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 0 20px; /* Add padding for spacing */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  padding: 0 20px;
+  transition: background-color 0.3s ease;
 }
 
 .nav {
@@ -16,32 +16,39 @@
 
 .nav li {
   list-style: none;
-  padding: 0 12px; /* Increase padding for better spacing */
-  transition: color 0.3s ease; /* Smooth transition for text color */
-  font-size: 20px; /* Increase font size for list items */
+  padding: 0 12px;
+  transition: color 0.3s ease;
+  font-size: 25px;
 }
 
 .nav li:hover {
-  color: #ff6347; /* Change text color on hover */
-  cursor: pointer; /* Change cursor on hover */
+  color: #b185db;
+  cursor: pointer;
 }
 
 .logo {
-  height: 30px;
-  font-size: 20px; /* Increase font size for the logo */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
+  height: 60px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.1); /* Scale up the logo on hover */
+  transform: scale(1.1);
 }
 
 .avatar {
-  height: 40px; /* Decrease avatar height for better proportion */
-  border-radius: 50%; /* Make the avatar circular */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 .avatar:hover {
-  transform: scale(1.1); /* Scale up the avatar on hover */
+  transform: scale(1.1);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .nav li {
+    font-size: 14px; /* Further decrease font size for list items on smaller screens */
+  }
 }

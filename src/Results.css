@@ -22,17 +22,18 @@ body {
 }
 
 .movie-details {
-  color: antiquewhite;
+  color: #d2b7e5;
   padding: 10px;
 }
 
 .movie-title {
   margin: 0;
-  color: antiquewhite;
+  color: #c19ee0;
 }
 
 .movie-overview {
-  color: aqua;
+  color: #d2b7e5;
+  font-family: "Sedan", sans-serif;
 }
 
 .movie-card {

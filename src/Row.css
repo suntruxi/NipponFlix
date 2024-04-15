@@ -4,10 +4,16 @@
 }
 
 .row h2 {
-  font-family: "Tilt Neon", sans-serif;
-  font-size: 2rem; /* Adjust size as needed */
-  margin-bottom: 20px; /* Add some space below the title */
-  color: #bde0fe;
+  font-family: "Sedan", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #dec9e9;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.row h2:hover {
+  color: #6247aa;
 }
 
 .row_posters {
